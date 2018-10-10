@@ -1,0 +1,292 @@
+.site-header .navbar {
+	background-color: rgba(0, 0, 0, .75);
+	padding: 1rem;
+}
+.navbar-brand {
+	width: 250px;
+	opacity: .50;
+	margin-right: 0;
+	transition: all .10s linear;
+}
+
+.navbar-brand:hover {
+	opacity: 1;
+}
+
+@media ( min-width: 992px ) {
+	.navbar-brand {
+		width: 200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate( -50%, -50%);
+	}		
+}
+
+@media ( min-width: 1200px ) {
+	.navbar-brand {
+		width: 300px;
+	}		
+}
+
+.site-footer {
+	color: #7a7a7a;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	position: relative;
+	background-color: #000;
+}
+.site-footer .mskuared-logo {
+	height: 150px;
+	width: 150px;
+	opacity: .50;
+}
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	bottom: 85%;
+	height: 100px;
+	background-color: inherit;
+}
+.site-footer:before {
+	transform: skewY( -3deg );
+}
+.site-footer:after {
+	transform: skewY( -177deg );
+}
+.site-footer a {
+	color:	inherit;
+	text-decoration: none;
+	transition: all .25s linear;
+}
+.site-footer a:hover,
+.site-footer a:focus {
+	color: #fff;
+}
+.site-copyright {
+	font-size: 90%;
+}
+
+/*------------------------------------*\
+	#Styles
+\*------------------------------------*/
+
+h1, h2 {
+	font-size: 3rem;
+}
+.header-divider {
+	font-family: "amboy-black",sans-serif;
+	font-weight: 400;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	position: relative;
+}
+.header-divider:before,
+.header-divider:after {
+	position: absolute;
+	top: 100%;
+}
+.header-divider:before {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin-left: -5px;
+	background-color: rgba( 0, 0, 0, .50);
+	transform: rotate(45deg) translateX( -50% );
+	left: 50%;
+}
+.header-divider:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(to right, rgba( 0, 0, 0, .50) 0%, rgba( 0, 0, 0, .50) 45%, rgba( 0, 0, 0, 0) 45%, rgba( 0, 0, 0, 0) 55%, rgba( 0, 0, 0, .50) 55%, rgba( 0, 0, 0, .50) 100%);
+}
+
+a, a:visited {
+	color: #002F6C;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/*------------------------------------*\
+	#Sections
+\*------------------------------------*/
+
+.section {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+}
+.section-feature {
+	min-height: 600px;
+	background-image: url('../images/layout/Hello-World.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+.section-feature:before {
+	content: '';
+	position: absolute;
+	z-index: 10;
+	background: linear-gradient(45deg, rgba(0, 47, 108, 0.75), rgba(224, 0, 17, 0.40) );
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.section-feature .intro-description {
+	color: rgba( 255, 255, 255, .75);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	z-index: 20;
+	transform: translate( 0, -50%);
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+@media ( min-width: 992px ) {
+	.section-feature .intro-description {
+		left: 50%;
+		right: auto;
+		transform: translate( -50%, -50%);
+		width: 800px;
+	}
+}
+
+.section-feature .my-name {
+	letter-spacing: 4px;
+}
+.section-feature .my-position {
+	letter-spacing: 3px;
+}
+.section-feature .btn-resume {
+	color: #fff;
+	border-color: #fff;
+}
+.section-about-me {
+	position: relative;
+	background-color: #fff;
+}
+.section-about-me:before {
+	content: '';
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	bottom: 80%;
+	transform: skewY( -3deg );
+	height: 100px;
+	background-color: inherit;
+}
+.section-about-me:after {
+	content: '';
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	bottom: 80%;
+	transform: skewY( -177deg );
+	height: 100px;
+	background-color: inherit;
+}
+.section-about-me .profile-pic {
+	height: 250px;
+	width: 250px;
+	margin-top: -150px;
+	z-index: 20;
+	position: relative;
+	border-radius: 50%;
+	border: 10px solid rgba(255,255,255,.2);
+	box-shadow: 0 2px 0 rgba(0, 0, 0, .15);
+}
+.section-portfolio {
+	background-image: url('../images/layout/cubes.png');
+	background-repeat: repeat;
+	background-position: 0 0;
+}
+.section-my-skills {
+	background-image:  linear-gradient(45deg, rgba(0, 47, 108, 0.75), rgba(224, 0, 17, 0.40)), url('../images/layout/Hello-World.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 6rem;
+}
+.section-my-skills {
+	color: rgba( 255, 255, 255, .75);
+}
+.section-contact { 
+	display: none;
+	visibility: hidden;
+}
+
+/*------------------------------------*\
+	#Cards
+\*------------------------------------*/
+
+.card-portfolio {
+	box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+	overflow: hidden;
+	transition: all .2s ease-in-out;
+}
+.card-portfolio:hover {
+	box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+}
+.card-portfolio img {
+	transition: all .2s ease-in-out;
+}
+.card-portfolio:hover img{
+	transform: scale( 1.1 );
+}
+
+.card-portfolio .card-body {
+	padding: .5rem;
+}
+
+/*------------------------------------*\
+	#List
+\*------------------------------------*/
+
+.list-inline a,
+.navbar-nav a {
+	color: #7a7a7a;
+	text-decoration: none;
+	transition: all .25s linear;
+}
+.list-inline a:hover,
+.list-inline a:focus,
+.navbar-nav a:hover,
+.navbar-nav a:focus {
+	color: #fff;
+}
+.list-skills .list-inline-item {
+	color: rgba( 255, 255, 255, .50);
+	margin: 20px 15px;
+	transition: all .25s linear;
+}
+.list-skills .list-inline-item:hover {
+	color: rgba( 255, 255, 255, 1);
+}
+.list-skills .list-inline-item img {
+	opacity: .5;
+	transition: all .25s linear;
+	vertical-align: text-bottom;
+}
+.list-skills .list-inline-item:hover img {
+	opacity: 1;
+}
+
+/*------------------------------------*\
+	#Misc Classes
+\*------------------------------------*/
